@@ -1,0 +1,18 @@
+{
+  "name": "luma-app",
+  "version": "1.0.0",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "cd client && npm install && cd ../server && npm install",
+    "build": "cd client && npm run build",
+    "electron": "electron .",
+    "predeploy": "cd client && npm run build",
+    "deploy": "gh-pages -d client/build"
+  },
+  "devDependencies": {
+    "electron": "^36.3.2",
+    "electron-builder": "^26.0.12",
+    "gh-pages": "^6.3.0"
+  }
+}
